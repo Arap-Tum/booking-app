@@ -1,11 +1,8 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
-func main() {
+func ForLOOP() {
 
 	conferenceName := "Go  confrence"
 	const conferenceTicket uint = 50
@@ -44,15 +41,7 @@ func main() {
 
 		fmt.Println("We have ", remainingTickets, "tickets remaining ")
 
-		firstNames := []string{}
-
-		for _, booking := range bookings {
-			var names = strings.Fields(booking)
-
-			firstNames = append(firstNames, names[0])
-		}
-
-		fmt.Printf("The first name of bookings are : %v\n", firstNames)
+		fmt.Printf("These are all the bookings : %v\n", bookings)
 	}
 
 }

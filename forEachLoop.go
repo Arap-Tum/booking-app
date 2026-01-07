@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func foreachLoop() {
 
 	conferenceName := "Go  confrence"
 	const conferenceTicket uint = 50
