@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func slice() {
 
 	conferenceName := "Go  confrence"
 	const conferenceTicket uint = 50
