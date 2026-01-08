@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func userINPUTValidTION() {
 
 	conferenceName := "Go  confrence"
 	const conferenceTicket uint = 50
