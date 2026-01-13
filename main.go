@@ -80,10 +80,24 @@ func main() {
 				fmt.Println("numbeer of tickets you r=entered is invalid ")
 			}
 
-			fmt.Println("Your input data is is invalid try again ")
-
 		}
 
+	}
+
+	city := "London"
+
+	switch city {
+	case "New York":
+		//Execute code for booking New York conference ticket
+	case "Singapore", "Hong Kong":
+		// Execute code for booking
+	case "London", "Berlin":
+		// Execute code for booking
+	case "Mexico city":
+		// Execute code for booking
+
+	default:
+		fmt.Print("No valid city selected ")
 	}
 
 }
