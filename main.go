@@ -12,9 +12,7 @@ func main() {
 	var remainingTickets uint = 50
 	bookings := []string{}
 
-	fmt.Printf("Welcome to %v our confrence booking application \n", conferenceName)
-	fmt.Printf("We have a total of %v tickets and %v are still available. \n", conferenceTicket, remainingTickets)
-	fmt.Println("Get your ticket  here to attend ")
+	greetUsers(conferenceName, conferenceTicket, remainingTickets)
 
 	for {
 		var firstName string
@@ -51,15 +49,8 @@ func main() {
 
 			fmt.Println("We have ", remainingTickets, "tickets remaining ")
 
-			firstNames := []string{}
-
-			for _, booking := range bookings {
-				var names = strings.Fields(booking)
-
-				firstNames = append(firstNames, names[0])
-			}
-
-			fmt.Printf("The first name of bookings are : %v\n", firstNames)
+			//call the function  prnt firstnames
+			printFirstNames(bookings)
 
 			if remainingTickets == 0 {
 				// end program
@@ -83,21 +74,23 @@ func main() {
 		}
 
 	}
+}
 
-	city := "London"
+func greetUsers(confName string, confTicket uint, remTickets uint) {
+	fmt.Printf("Welcome to %v booking application \n", confName)
 
-	switch city {
-	case "New York":
-		//Execute code for booking New York conference ticket
-	case "Singapore", "Hong Kong":
-		// Execute code for booking
-	case "London", "Berlin":
-		// Execute code for booking
-	case "Mexico city":
-		// Execute code for booking
+	fmt.Printf("We have a total of %v tickets and %v are still available. \n", confTicket, remTickets)
+	fmt.Println("Get your ticket  here to attend ")
+}
 
-	default:
-		fmt.Print("No valid city selected ")
+func printFirstNames(bookings []string) {
+	firstNames := []string{}
+
+	for _, booking := range bookings {
+		var names = strings.Fields(booking)
+
+		firstNames = append(firstNames, names[0])
 	}
 
+	fmt.Printf("The first name of bookings are : %v\n", firstNames)
 }
